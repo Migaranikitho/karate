@@ -88,8 +88,8 @@ class CreateBlog extends React.Component {
 
                 <Form.Group className="mb-3">
                 </Form.Group>
-                <Col md={{ span: 3, offset: 1 }}>
-                    <Button type="submit">Post</Button>
+                <Col className="md-3">
+                    <Button type="submit" variant="primary" className="sticky-left" size="lg">Post</Button>
                 </Col>
             </Form>
         );

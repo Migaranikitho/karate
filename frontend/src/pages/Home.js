@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Background from "./Background.js";
+import background from '../resources/home bi.jpeg'
 
 
 class Home extends React.Component {
@@ -12,7 +13,7 @@ class Home extends React.Component {
         return (
 
 
-            <div style={{ backgroundImage: `url('./../Resources_/wado.jpg')`, backgroundRepeat: "no-repeat", backgroundPosition: "center", position: 'relative' }}>
+            <div style={{ src:{background}, backgroundRepeat: "no-repeat", backgroundPosition: "center", position: 'relative' }}>
                 <Row>
                     <Col>
                     </Col>

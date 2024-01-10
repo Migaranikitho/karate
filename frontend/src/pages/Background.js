@@ -1,9 +1,9 @@
-function Background() {
-  return (
-    <div className="bg-image" style={{backgroundImage: `url('./../Resources_/wado.jpg')`, backgroundRepeat: "no-repeat", backgroundPosition: "center",position: 'relative'}}>
+import React from "react";
 
-    </div>
-  )
+const BackgroundImagePage = () => {
+  return (
+    <div className="bg"></div>
+  );
 }
 
-export default Background;
+export default BackgroundImagePage;

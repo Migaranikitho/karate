@@ -55,7 +55,9 @@ class Blogs extends React.Component {
                     ))
                     }
                 </Row>
-                <Button className="sticky-left" href = '/CreateBlog' variant="primary" size="sm">Create</Button>
+                <Col className="md-3">
+                <Button className="" href = '/CreateBlog' variant="primary" size="lg">Create</Button>
+                </Col>
             </div>
         );
     }
