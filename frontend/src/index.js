@@ -1,25 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import { GoogleLogin } from '@react-oauth/google';
+import Login from './pages/Login';
 
+let metaElement = document.querySelector(`meta[name="google-signin-client_id"]`);
+
+    if (!metaElement) {
+      metaElement = document.createElement('meta');
+      metaElement.setAttribute('name', 'google-signin-client_id');
+      document.head.appendChild(metaElement);
+    }
+
+    metaElement.setAttribute('content', '783266013005-sgk9ngsqg751u5mfpl6umti083pmc4ib.apps.googleusercontent.com');
+    
+const script = document.createElement("script");
+    script.src = "https://apis.google.com/js/platform.js";
+    document.head.appendChild(script);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    <React.StrictMode>
-    <GoogleOAuthProvider clientId="783266013005-sgk9ngsqg751u5mfpl6umti083pmc4ib.apps.googleusercontent.com">
-    <GoogleLogin
-  onSuccess={credentialResponse => {
-    console.log(credentialResponse);
-  }}
-  onError={() => {
-    console.log('Login Failed');
-  }}
-/>
-    <App />
-    </GoogleOAuthProvider>
+    {/* <GoogleOAuthProvider clientId=".apps.googleusercontent.com"> */}
+   
+    <Login />
+    {/* </GoogleOAuthProvider> */}
     </React.StrictMode>
   
 );
